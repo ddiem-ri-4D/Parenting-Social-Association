@@ -1,0 +1,248 @@
+.login {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &-contain {
+        display: flex;
+        align-items: center;
+        gap: 180px;
+        .mid();
+    }
+
+    .banner {
+        width: 50%;
+        flex-shrink: 0;
+
+        &__top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &-logo {
+                width: 160px;
+            }
+
+            &-title {
+                font-size: 40px;
+                color: @text-black;
+                text-transform: capitalize;
+                text-align: center;
+            }
+        }
+    }
+
+    .form-contain {
+        width: 50%;
+
+        .title {
+            font-size: 50px;
+            font-family: qsb;
+        }
+
+        .form {
+            margin-top: 65px;
+
+            &__item {
+
+                .ant-input {
+                    height: 50px;
+                    font-size: 16px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                .ant-form-item-label {
+                    line-height: 1.2;
+                }
+
+                label {
+                    font-size: 22px;
+                }
+            }
+
+            &-forgot {
+                .ant-form-item-control {
+                    display: flex;
+                    justify-content: flex-end;
+
+                }
+
+                a {
+                    font-size: 22px;
+                    color: #95AFC0;
+                    line-height: initial;
+                }
+
+            }
+
+            // Đè css của thư viện
+            &-btn.ant-btn.ant-btn-primary {
+                height: 50px;
+                font-size: 16px;
+                padding: 0 80px;
+            }
+
+            .ant-form-item:last-child {
+                margin-bottom: initial;
+            }
+        }
+    }
+}
+
+//responsive
+
+.desktop( {
+        .login {
+            &-contain {
+                gap: 80px;
+            }
+
+            .banner {
+                width: 50%;
+                flex-shrink: 0;
+
+                &__top {
+                    margin-bottom: 16px;
+
+                    &-logo {
+                        width: 100px;
+                    }
+
+                    &-title {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            .form-contain {
+                .title {
+                    font-size: 32px;
+                }
+
+                .form {
+                    margin-top: 40px;
+
+                    &__item {
+                        .ant-input {
+                            height: 44px;
+                            font-size: 14px;
+                        }
+
+                        label {
+                            font-size: 18px;
+                        }
+                    }
+
+                    &-forgot {
+                        margin-bottom: 8px;
+
+                        a {
+                            font-size: 18px;
+                        }
+
+                    }
+
+                    // Đè css của thư viện
+                    &-btn.ant-btn.ant-btn-primary {
+                        height: 44px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+);
+
+.tablet( {
+        .login {
+            &-contain {
+                gap: 24px;
+                flex-direction: column;
+            }
+
+            .banner {
+                width: 100%;
+
+                &__bottom {
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .form-contain {
+                width: 100%;
+
+                .form {
+
+                    // Đè css của thư viện
+                    &-btn.ant-btn.ant-btn-primary {
+                        padding: initial;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+);
+
+.mobile-xxs( {
+        .login {
+            .banner {
+                &__top {
+                    &-logo {
+                        width: 80px;
+                    }
+
+                    &-title {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .form-contain {
+                .title {
+                    font-size: 24px;
+                }
+
+                .form {
+                    margin-top: 16px;
+
+                    &__item {
+
+                        .ant-input {
+                            font-size: 12px;
+                            margin-top: 4px;
+                            margin-bottom: 4px;
+                        }
+
+                        label {
+                            font-size: 16px;
+                        }
+                    }
+
+                    &-forgot {
+
+                        a {
+                            font-size: 16px;
+                        }
+
+                    }
+
+                    // Đè css của thư viện
+                    font-size: 14px;
+
+                }
+            }
+        }
+    }
+
+);

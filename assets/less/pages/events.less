@@ -1,0 +1,106 @@
+main.events {
+    h1 {
+        font-size: 24px;
+        padding: 16px 0;
+        color: @color-default;
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: @color-default;
+        }
+    }
+
+    .events {
+        margin-top: 24px;
+
+        &__item {
+            padding: 16px;
+            border-radius: 6px;
+            background: @bg-white;
+            box-shadow: @shadow-1;
+            margin-bottom: 16px;
+
+            &-img {
+                width: 144px;
+                overflow: hidden;
+                border-radius: 6px;
+                margin-right: 16px;
+                flex-shrink: 0;
+                float: left;
+
+                img {
+                    height: auto;
+                }
+            }
+
+            &-content {
+                color: @text-black;
+                min-height: 144px;
+
+                .title {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                }
+
+                .time {
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, 0.65);
+                    margin-bottom: 16px;
+                }
+
+                .content {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.mobile( {
+        main.events {
+            h1 {
+                font-size: 20px;
+                width: 100%;
+
+                &::after {
+                    height: 1px;
+                }
+            }
+
+            .events {
+                &__item {
+                    padding: 8px;
+
+                    &-img {
+                        width: 64px;
+                        height: 64px;
+                        margin-right: 8px;
+                    }
+
+                    &-content {
+                        min-height: 64px;
+                        .title {
+                            font-size: 18px;
+                        }
+
+                        .time {
+                            font-size: 12px;
+                        }
+
+                        .content {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+);

@@ -1,0 +1,194 @@
+// header css file
+header {
+    height: @height-header;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
+
+    .container-fluid {
+        position: relative;
+        height: 100%;
+        display: flex;
+
+        .logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            a {
+                height: 50px;
+
+                img {
+                    width: auto;
+                }
+
+                &:hover {
+                    opacity: initial;
+                }
+            }
+        }
+
+        // .search {
+        //     height: 100%;
+        //     display: flex;
+        //     align-items: center;
+        //     margin-left: 20px;
+
+        //     &__contain {
+        //         position: relative;
+        //         height: 40px;
+        //         width: 318px;
+
+        //         &-input {
+        //             position: absolute;
+        //             height: 100%;
+        //             width: 100%;
+        //             left: 0;
+        //             top: 0;
+        //             outline: none;
+        //             border-radius: 50px;
+        //             border: 1px solid @color-default;
+        //             padding: 4px 44px;
+        //             font-size: 16px;
+        //             padding-right: 14px;
+        //             color: @color-default;
+
+        //             &::placeholder {
+        //                 color: @color-default;
+        //             }
+        //         }
+
+        //         .icon-search {
+        //             font-size: 18px;
+        //             color: @color-default;
+        //             left: 20px;
+        //             .mid-y();
+        //         }
+        //     }
+        // }
+
+        .right {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-left: auto;
+
+            &__item {
+                cursor: pointer;
+
+                &.user {
+                    .contain-avt(40px);
+                }
+            }
+
+            .search,
+            .lang,
+            .noti {
+                font-size: 18px;
+                font-family: pdb;
+                cursor: pointer;
+                color: @color-default;
+                height: 100%;
+                padding: 0 10px;
+                display: flex;
+                align-items: center;
+                .hover-bg();
+            }
+        }
+    }
+}
+
+.drop-user {
+    & &-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .icon {
+            font-size: 14px;
+        }
+
+        span {
+            padding-right: 32px;
+        }
+    }
+}
+
+.drop-noti {
+    padding: 16px 24px;
+    background-color: @bg-white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    .title {
+        font-size: 20px;
+        color: @text-black;
+        margin-bottom: 16px;
+    }
+
+    .notis {
+        &__item {
+            a {
+                color: @text-gray-3;
+                display: flex;
+                padding: 8px 16px;
+                background: @bg-fa;
+                border-radius: 4px;
+                margin-bottom: 8px;
+                align-items: center;
+
+                .icon {
+                    margin-right: 8px;
+                    color: @color-default;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .see-all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            margin-left: 4px;
+            font-size: 16px;
+        }
+    }
+}
+
+.mobile( {
+        header {
+            .container-fluid {
+                padding-left: 15px;
+                padding-right: 15px;
+
+                .search {
+                    display: none
+                }
+
+                .logo {
+                    a {
+                        height: 48px
+                    }
+                }
+
+                .right {
+                    gap: 8px;
+
+                    .search,
+                    .lang,
+                    .noti {
+                        padding: 0 4px;
+                    }
+                }
+            }
+        }
+    }
+
+);

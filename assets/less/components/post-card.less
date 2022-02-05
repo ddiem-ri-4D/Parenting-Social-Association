@@ -1,0 +1,231 @@
+.post-card {
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: @shadow-1;
+    background: @bg-white;
+    margin-bottom: 40px;
+
+    .actor {
+        display: flex;
+        align-items: center;
+
+        &__avt {
+            .contain-avt(60px);
+        }
+
+        &__name {
+            margin-left: 20px;
+
+            &-text {
+                a {
+                    font-size: 24px;
+                    color: @text-black;
+                    font-family: pdb;
+                }
+            }
+
+            &-time {
+                font-size: 14px;
+                margin-top: 8px;
+                font-family: qsm;
+            }
+        }
+
+        &__action {
+            margin-left: auto;
+            display: grid;
+            place-items: center;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            position: relative;
+
+            &::after {
+                content: '';
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+                border-radius: 50%;
+                .mid();
+            }
+
+            &:hover::after {
+                background: @cl-hover;
+            }
+
+            .three-dot {
+                z-index: 5;
+            }
+
+            .menu {
+                padding: 10px;
+                border-radius: 6px;
+                background: @color-default;
+                position: absolute;
+                bottom: -8px;
+                right: 0;
+                transform: translateY(100%);
+                z-index: 5;
+                .hidden();
+
+                &__item {
+                    width: max-content;
+                    font-size: 14px;
+                    color: @text-white;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: initial;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 0;
+                    width: 0;
+                    top: 0;
+                    right: 12px;
+                    transform: translateY(-100%);
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid @color-default;
+
+                }
+
+                &.active {
+                    .visible();
+                }
+            }
+        }
+    }
+
+    .image {
+        margin-top: 16px;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .content {
+        margin-top: 16px;
+        font-size: 18px;
+        color: @text-black;
+        line-height: 24px;
+    }
+
+    .bar {
+        padding: 4px 0;
+        border-bottom: 1px solid @cl-line;
+        border-top: 1px solid @cl-line;
+    }
+
+    .comments {
+        margin-top: 20px;
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+
+            &-avt {
+                .contain-avt(40px);
+            }
+
+            &-content {
+                margin-left: 16px;
+                font-size: 14px;
+                padding: 4px 8px;
+                border-radius: 6px;
+                background: @bg-comment;
+
+                .name {
+                    font-size: 16px;
+                    color: @text-black;
+                }
+
+                .body {
+                    margin-top: 8px;
+                }
+
+            }
+        }
+
+        &__btn {
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover {
+                color: @color-default;
+            }
+        }
+    }
+}
+
+.desktop-large( {
+        .post-card {
+            padding: 16px;
+
+            .actor {
+                &__name {
+                    &-text {
+                        a {
+                            font-size: 22px;
+                        }
+                    }
+
+                    &-time {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .content {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+    }
+
+);
+
+.mobile( {
+        .post-card {
+            padding: 16px;
+            margin-bottom: 32px;
+
+            .actor {
+                &__avt {
+                    .contain-avt(40px);
+                }
+
+                &__name {
+                    margin-left: 16px;
+
+                    &-text {
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+
+                    &-time {
+                        font-size: 10px;
+                        margin-top: 4px;
+                    }
+                }
+            }
+
+            .image {
+                margin-top: 16px;
+            }
+
+            .content {
+                margin-top: 16px;
+                font-size: 16px;
+            }
+        }
+
+    }
+
+);

@@ -1,0 +1,66 @@
+main.notification {
+    .container {
+        height: 100%;
+        background-color: @bg-white;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding: 16px 0;
+        color: @color-default;
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: @color-default;
+        }
+    }
+
+    .notifications {
+        &__item {
+            margin-bottom: 16px;
+
+            a {
+                background-color: @bg-fa;
+                padding: 8px 16px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                color: @text-gray-3;
+
+                .icon {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .show-more{
+        padding: 16px 0;
+        text-align: center;
+        font-size: 16px;
+    }
+
+}
+
+.mobile( {
+        main.notification {
+            h1 {
+                font-size: 20px;
+                width: 100%;
+
+                &::after {
+                    height: 1px;
+                }
+            }
+        }
+    }
+
+);
